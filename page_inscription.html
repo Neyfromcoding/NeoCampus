@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - NeoCampus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-4xl w-full">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold gradient-text">NeoCampus</h1>
+            </div>
+            <p class="text-gray-600">Rejoignez la communauté étudiante collaborative</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <!-- Formulaire d'inscription -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Créer un compte</h2>
+                <p class="text-gray-600 mb-6">Commencez votre aventure académique collaborative</p>
+
+                <form class="space-y-6" method="post" action="maquette.html">
+                    <!-- Informations personnelles -->
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email universitaire *</label>
+                        <input type="email" required placeholder="prenom.nom@etudiant.univ.fr" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <p class="text-xs text-gray-500 mt-1">Utilisez votre email universitaire pour vérification</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mot de passe *</label>
+                            <input type="password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Confirmer le mot de passe *</label>
+                            <input type="password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Informations académiques -->
+                    <div class="border-t pt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Informations académiques</h3>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Niveau d'études *</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Sélectionnez</option>
+                                    <option value="L1">Licence 1</option>
+                                    <option value="L2">Licence 2</option>
+                                    <option value="L3">Licence 3</option>
+                                    <option value="M1">Master 1</option>
+                                    <option value="M2">Master 2</option>
+                                    <option value="Doctorat">Doctorat</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Filière *</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Sélectionnez</option>
+                                    <option value="informatique">Informatique</option>
+                                    <option value="mathematiques">Mathématiques</option>
+                                    <option value="physique">Physique</option>
+                                    <option value="chimie">Chimie</option>
+                                    <option value="biologie">Biologie</option>
+                                    <option value="medecine">Médecine</option>
+                                    <option value="droit">Droit</option>
+                                    <option value="economie">Économie</option>
+                                    <option value="gestion">Gestion</option>
+                                    <option value="lettres">Lettres</option>
+                                    <option value="autres">Autres</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Université/Établissement *</label>
+                            <input type="text" required placeholder="Nom de votre université" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Centre d'intérêts -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Matières préférées (optionnel)</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Informatique</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Mathématiques</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Physique</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Chimie</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Biologie</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-gray-700">Économie</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Conditions -->
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" required class="mt-1 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <div>
+                            <p class="text-sm text-gray-700">
+                                J'accepte les
+                                <a href="#" class="text-blue-600 hover:underline">Conditions d'utilisation</a> et la
+                                <a href="#" class="text-blue-600 hover:underline">Politique de confidentialité</a>
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">
+                                Je m'engage à respecter les règles de la communauté et à partager du contenu de qualité.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bouton d'inscription -->
+                    <a href="maquette.html"> 
+                        <button class="w-full gradient-bg text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                            Créer mon compte
+                        </button> 
+                    </a>
+
+                    <!-- Lien de connexion -->
+                    <div class="text-center">
+                        <p class="text-gray-600">
+                            Déjà un compte ?
+                            <a href="connexion.html" class="text-blue-600 font-semibold hover:underline">Se connecter</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Section avantages -->
+            <div class="space-y-6">
+                <!-- Carte avantages -->
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 text-white">
+                    <h3 class="text-xl font-bold mb-4">Pourquoi nous rejoindre ?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Accès à des milliers de résumés</p>
+                                <p class="text-sm text-blue-100">Ressources vérifiées par la communauté</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Gagnez des points et badges</p>
+                                <p class="text-sm text-blue-100">Système de gamification motivant</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Économisez du temps</p>
+                                <p class="text-sm text-blue-100">Jusqu'à 60% de temps de révision gagné</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Entraide communautaire</p>
+                                <p class="text-sm text-blue-100">Rejoignez 8,934 étudiants actifs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistiques -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Notre communauté en chiffres</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-blue-600">8,934</p>
+                            <p class="text-sm text-gray-600">Étudiants</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600">1,247</p>
+                            <p class="text-sm text-gray-600">Résumés</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-purple-600">12K+</p>
+                            <p class="text-sm text-gray-600">Heures économisées</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-orange-600">98%</p>
+                            <p class="text-sm text-gray-600">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <div class="flex gap-1 mb-3">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">
+                        "Cette plateforme a transformé ma façon de réviser. L'inscription a été simple et rapide, et j'ai immédiatement trouvé des ressources pertinentes pour mes cours."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                            LN
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Lingue N.</p>
+                            <p class="text-sm text-gray-600">Top contributeur - 2,840 points</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8">
+            <p class="text-gray-500 text-sm">
+                © 2025 NeoCampus - Hackathon Innovation |
+                <a href="index.html" class="text-blue-600 hover:underline">Retour à l'accueil</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Validation des mots de passe
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const password = document.querySelector('input[type="password"]').value;
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                alert('Les mots de passe ne correspondent pas.');
+                return false;
+            }
+
+            if (password.length < 6) {
+                e.preventDefault();
+                alert('Le mot de passe doit contenir au moins 6 caractères.');
+                return false;
+            }
+        });
+
+        // Animation simple au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.classList.add('animate-fade-in');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - NeoCampus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full space-y-8">
+        <!-- Je mets tout ce qui constitue le header ici-->
+        <div class="text-center">
+            <div class="flex justify-center mb-4">
+                <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold gradient-text mb-2">NeoCampus</h1>
+            <p class="text-gray-600">Résumés Collaboratifs - Bureau des Étudiants</p>
+        </div>
+
+        <!-- Connexion -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 text-center mb-6">Connexion</h2>
+
+            <form class="space-y-6" method="post" action="maquette.html">
+                <!-- Email -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        Adresse email universitaire
+                    </label>
+                    <div class="relative">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+                        </svg>
+                        <input type="email" placeholder="nom@gmail.com" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                    </div>
+                </div>
+
+                <!-- Mot d passe-->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        Mot de passe
+                    </label>
+                    <div class="relative">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <input type="password" placeholder="Votre mot de passe" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                    </div>
+                </div>
+
+                <!-- La partie pour j'ai oublié mon mot de passe -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <label for="remember" class="ml-2 text-sm text-gray-600">
+                            Se souvenir de moi
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-semibold">
+                        Mot de passe oublié ?
+                    </a>
+                </div>
+                <br>
+                <!-- Boutton soumettre-->
+                <a href="maquette.html"><button class="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center gap-2">
+                        Se connecter
+                    </button>
+                </a> 
+            </form>
+
+            <!-- -->
+            <div class="mt-6 pt-6 border-t border-gray-200">
+                <p class="text-center text-gray-600 text-sm mb-4">
+                    Première fois sur NeoCampus ?
+                </p>
+                <a href="page_inscription.html" target="_blank"><button class="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                    </svg>
+                    Créer un compte étudiant
+                </button> </a>
+            </div>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="text-center">
+            <div class="grid grid-cols-3 gap-4 text-sm text-gray-600">
+                <div>
+                    <p class="text-2xl font-bold text-gray-900">8,934</p>
+                    <p>Étudiants</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-gray-900">1,247</p>
+                    <p>Résumés</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-gray-900">12K+</p>
+                    <p>Heures économisées</p>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="text-center text-gray-500 text-sm">
+        <p>© 2025 NeoCampus. Hackathon Innovation</p>
+        <p class="mt-1">L'intelligence collective au service de votre réussite</p>
+    </div>
+</footer>
+
+<script>
+    // Animation simple au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        form.classList.add('animate-fade-in');
+    });
+</script>
+
+<style>
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+</style>
+
+
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - NeoCampus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Barre de Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">NeoCampus</span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">À propos</a>
+                    <a href="features.html" class="text-gray-700 hover:text-blue-600 transition">Fonctionnalités</a>
+                    <a href="faq.html" class="text-blue-600 font-semibold hover:text-blue-700 transition">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="connexion.html" target="_blank"><button class="px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50 rounded-lg transition">
+                        Connexion
+                    </button> </a>
+                    <a href="Page d'inscription.html" target="_blank"><button class="px-4 py-2 gradient-bg text-white font-semibold rounded-lg hover:shadow-lg transition">
+                        Inscription
+                    </button> </a>
+                </div>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700">Accueil</a>
+                <a href="about.html" class="block text-gray-700">À propos</a>
+                <a href="features.html" class="block text-gray-700">Fonctionnalités</a>
+                <a href="faq.html" class="block text-blue-600 font-semibold">FAQ</a>
+                <a href="contact.html" class="block text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section class="pt-32 pb-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                Questions Fréquentes
+            </h1>
+            <p class="text-xl text-white opacity-90 leading-relaxed">
+                Trouvez rapidement les réponses à vos questions
+            </p>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Général -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">🎯 Général</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Qu'est-ce que NeoCampus ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                NeoCampus est une plateforme collaborative où les étudiants peuvent créer, partager et valider ensemble des résumés de cours. C'est comme un Wikipedia de l'apprentissage étudiant, où la communauté garantit la qualité du contenu par un système de votes
+                                et de commentaires.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Est-ce que c'est vraiment gratuit ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Oui, 100% gratuit pour tous les étudiants ! Notre mission est de rendre l'éducation accessible à tous, sans barrières financières. Vous pouvez créer un compte, accéder à tous les résumés, contribuer et gagner des points sans jamais payer un centime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Pour quels niveaux d'études ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                La plateforme est conçue pour tous les niveaux universitaires : Licence (L1, L2, L3), Master (M1, M2) et Doctorat. Toutes les filières sont bienvenues : sciences, droit, gestion, médecine, lettres, arts, etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilisation -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">💡 Utilisation</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Comment créer un compte ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Il suffit de cliquer sur "Inscription" en haut à droite, de renseigner votre email étudiant, de créer un mot de passe, et de remplir quelques informations sur votre profil (niveau d'études, filière). C'est tout ! Vous pouvez aussi vous connecter avec
+                                votre compte Google ou Facebook.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Comment trouver un résumé ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Utilisez la barre de recherche en haut de la page d'accueil. Vous pouvez rechercher par matière (ex: "Thermodynamique"), par chapitre (ex: "Chapitre 3"), ou par mots-clés (ex: "Newton"). Vous pouvez aussi filtrer par niveau, date, et popularité pour affiner
+                                vos résultats.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Comment créer un résumé ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Cliquez sur le bouton "Contribuer" dans le menu principal. Vous pouvez soit taper votre résumé directement en ligne avec notre éditeur, soit uploader un fichier PDF ou Word. Remplissez les informations (matière, niveau, chapitre) et publiez ! Vous gagnerez
+                                50 points pour chaque résumé créé.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Puis-je télécharger les résumés ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Oui ! Tous les résumés peuvent être téléchargés en PDF pour être consultés hors ligne. Vous pouvez aussi les ajouter à vos favoris pour un accès rapide, ou les organiser dans des collections personnalisées par matière ou par examen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Qualité et Sécurité -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">🔒 Qualité & Sécurité</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Comment garantir la qualité des résumés ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                La communauté vote sur chaque résumé (👍 ou 👎). Les résumés les plus votés remontent en haut des résultats. De plus, les étudiants peuvent laisser des commentaires pour suggérer des améliorations ou signaler des erreurs. Les résumés qui obtiennent un
+                                score élevé reçoivent un badge "Vérifié" ⭐.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Que se passe-t-il si je trouve une erreur dans un résumé ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Vous pouvez soit laisser un commentaire pour signaler l'erreur, soit proposer une amélioration directement. Si l'erreur est grave, vous pouvez utiliser le bouton "Signaler" pour que notre équipe modération examine le contenu rapidement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Mes données sont-elles sécurisées ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Absolument ! Toutes vos données sont chiffrées et stockées de manière sécurisée. Nous respectons le RGPD et ne partageons jamais vos informations personnelles avec des tiers. Vous avez le contrôle total sur vos données et pouvez les supprimer à tout moment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Qu'en est-il du plagiat et des droits d'auteur ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Nous prenons le plagiat très au sérieux. Tout résumé doit être du contenu original créé par l'étudiant. En publiant un résumé, vous acceptez qu'il soit partagé sous licence Creative Commons (attribution). Si nous détectons du plagiat, le résumé est immédiatement
+                                supprimé et le compte peut être suspendu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Points et Gamification -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">🎮 Points & Badges</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Comment gagner des points ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <div class="text-gray-600 leading-relaxed">
+                                <p class="mb-3">Vous gagnez des points en contribuant activement :</p>
+                                <ul class="space-y-2 ml-4">
+                                    <li>• <strong>+50 points</strong> : Créer un nouveau résumé</li>
+                                    <li>• <strong>+25 points</strong> : Améliorer un résumé existant</li>
+                                    <li>• <strong>+10 points</strong> : Voter sur un résumé</li>
+                                    <li>• <strong>+5 points</strong> : Laisser un commentaire utile</li>
+                                    <li>• <strong>+100 points</strong> : Votre résumé obtient le badge "Vérifié"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">À quoi servent les points ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Les points vous permettent de monter dans le classement, de débloquer des badges exclusifs, et de gagner en reconnaissance au sein de la communauté. Plus vous avez de points, plus votre profil est mis en avant. À l'avenir, nous prévoyons d'offrir des
+                                récompenses concrètes aux meilleurs contributeurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Quels badges puis-je débloquer ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <div class="text-gray-600 leading-relaxed">
+                                <p class="mb-3">Il existe de nombreux badges à débloquer :</p>
+                                <ul class="space-y-2 ml-4">
+                                    <li>• 🌟 <strong>Première Contribution</strong> : Créer votre premier résumé</li>
+                                    <li>• 🔥 <strong>Contributeur Actif</strong> : 10 résumés créés</li>
+                                    <li>• 👑 <strong>Expert</strong> : 50 résumés créés</li>
+                                    <li>• ⭐ <strong>Top Voteur</strong> : 100 votes effectués</li>
+                                    <li>• 💎 <strong>Légende</strong> : 1000 points atteints</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technique -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">⚙️ Questions Techniques</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Y a-t-il une application mobile ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Oui ! Nous avons des applications mobiles disponibles sur iOS et Android. Elles vous permettent d'accéder à tous vos résumés même hors ligne, de recevoir des notifications pour les nouveaux contenus, et de contribuer depuis votre smartphone ou tablette.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">Quels formats de fichiers sont acceptés ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                Vous pouvez uploader des fichiers PDF, Word (.doc, .docx), ou taper directement en ligne avec notre éditeur. La taille maximale par fichier est de 10 MB. Pour les images, nous acceptons JPG, PNG et SVG.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition">
+                            <span class="text-lg font-semibold text-gray-900 text-left">J'ai un problème technique, que faire ?</span>
+                            
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width></path>
+                                </svg>
+                                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Appel à l'action -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Vous n'avez pas trouvé votre réponse ?</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Notre équipe est là pour vous aider
+            </p>
+            <a href="contact.html" class="inline-block px-8 py-4 gradient-bg text-white font-bold rounded-lg hover:shadow-xl transition">
+                Nous contacter →
+            </a>
+        </div>
+    </section>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const allFaqItems = document.querySelectorAll('.faq-item');
+
+            // Close all other FAQ items
+            allFaqItems.forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                    </div>
+                    <span class="font-bold text-lg">NeoCampus</span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    L'intelligence collective au service de votre réussite académique
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Plateforme</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="features.html" class="hover:text-white transition">Fonctionnalités</a></li>
+                    <li><a href="#" class="hover:text-white transition">Tarifs</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sécurité</a></li>
+                    <li><a href="#" class="hover:text-white transition">API</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Entreprise</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="about.html" class="hover:text-white transition">À propos</a></li>
+                    <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="#" class="hover:text-white transition">Carrières</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Légal</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Confidentialité</a></li>
+                    <li><a href="#" class="hover:text-white transition">CGU</a></li>
+                    <li><a href="#" class="hover:text-white transition">Cookies</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-400 text-sm">
+                © 2025 NeoCampus. Hackathon Innovation - Tous droits réservés.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121L7.773 13.72l-2.91-.908c-.632-.196-.643-.632.132-.936l11.387-4.39c.528-.196.994.122.822.936z"/>
+                        </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil — Connexion / Inscription</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="logo-container">
+            <img src="WhatsApp Image 2025-11-30 at 6.48.40 PM.jpeg" alt="Logo NeoCampus">
+        </div>
+        <div class="hero">
+            <h1>Bienvenue sur NeoCampus</h1>
+            <p>Commencez votre expérience</p>
+            <div class="buttons">
+                <a href="connexion.html"> <button id="loginBtn">Se connecter</button> </a>
+                <a href="Page d'inscription.html"> <button id="signupBtn">S'inscrire</button> </a>
+            </div>
+        </div>
+        <script src="script.js">
+            // Animation des boutons au clic
+            document.querySelectorAll("button").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.classList.add("clicked");
+                    setTimeout(() => btn.classList.remove("clicked"), 200);
+                });
+            });
+
+            // Exemple d'action (tu pourras remplacer par tes pages)
+            document.getElementById("loginBtn").addEventListener("click", () => {
+                alert("Redirection vers la page de connexion...");
+            });
+
+            document.getElementById("signupBtn").addEventListener("click", () => {
+                alert("Redirection vers la page d'inscription...");
+            });
+        </script>
+        <style>
+            .logo-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                animation: fadeLogo 1.2s ease forwards;
+            }
+            
+            .logo-container img {
+                width: 120px;
+                height: auto;
+                filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+                animation: breathe 4s ease-in-out infinite, glow 3s ease-in-out infinite;
+                border-radius: 15px;
+            }
+            
+            @keyframes breathe {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.06);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            
+            @keyframes glow {
+                0% {
+                    filter: drop-shadow(0 0 8px #4a90e2);
+                }
+                50% {
+                    filter: drop-shadow(0 0 18px #6fc3ff);
+                }
+                100% {
+                    filter: drop-shadow(0 0 8px #4a90e2);
+                }
+            }
+            /* ----- Reset ----- */
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+            /* ----- Page entière ----- */
+            
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-size: 400% 400%;
+                animation: bgMove 12s ease infinite;
+                color: white;
+            }
+            
+            @keyframes bgMove {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            /* ----- Animation fade-in ----- */
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            /* ----- Section centrale ----- */
+            
+            .hero {
+                text-align: center;
+                animation: slideUp 1s ease forwards;
+            }
+            
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            /* ----- Titre et texte ----- */
+            
+            .hero h1 {
+                animation: titlePulse 3.5s ease-in-out infinite;
+            }
+            
+            @keyframes titlePulse {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                50% {
+                    opacity: 0.85;
+                    transform: translateY(-4px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+                opacity: 0.8;
+            }
+            /* ----- Boutons ----- */
+            
+            .buttons {
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            button {
+                padding: 12px 25px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                backdrop-filter: blur(5px);
+                transition: transform 0.25s;
+                background: 0.25s, box-shadow 0.25s;
+                position: relative;
+                overflow: hidden;
+                animation: btnGlow 4s ease-in-out infinite;
+            }
+            
+            @keyframes btnGlow {
+                0% {
+                    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+                }
+                50% {
+                    box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+                }
+                100% {
+                    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+                }
+            }
+            /* Effet hover / appui */
+            
+            button:hover {
+                transform: translateY(-4px) scale(1.05);
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            button:active {
+                transform: scale(0.97);
+            }
+        </style>
+
+</html>
